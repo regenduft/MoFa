@@ -1,0 +1,334 @@
+This is pdfTeX, Version 3.14159-1.10b (Web2C 7.4.5) (format=pdflatex 2006.9.13)  13 DEC 2006 09:00
+**main.tex
+(./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/usr/share/texmf/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2003/01/31 v2.9n LaTeX2e KOMA document class
+(/usr/share/texmf/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2003/01/31 v2.9n LaTeX2e KOMA package
+
+Package scrlfile, 2003/01/31 v2.9n LaTeX2e KOMA package
+                  Copyright (C) Markus Kohm
+
+) (/usr/share/texmf/tex/latex/extsizes/size8.clo
+File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(/usr/share/texmf/tex/latex/koma-script/typearea.sty
+Package: typearea 2003/01/31 v2.9n LaTeX2e KOMA package
+
+Package typearea, 2003/01/31 v2.9n LaTeX2e KOMA package
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-2002
+
+\ta@bcor=\skip41
+\ta@div=\count79
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+DIV calculation for typearea with good linewidth.
+
+Package typearea Warning: Bad DIV-value!
+(typearea)                You should decrease DIV, increase fontsize or
+(typearea)                change papersize.
+
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 24
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 522.81944pt
+(typearea)              DIV-departure   = -74/100
+(typearea)              \evensidemargin = -34.92575pt
+(typearea)              \oddsidemargin  = -34.92575pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 740.5pt
+(typearea)              \topmargin      = -63.18471pt
+(typearea)              \headheight     = 11.875pt
+(typearea)              \headsep        = 14.25pt
+(typearea)              \topskip        = 9.0pt
+(typearea)              \footskip       = 33.25pt
+(typearea)              \baselineskip   = 9.5pt
+(typearea)              on input line 625.
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip45
+\belowcaptionskip=\skip46
+\c@pti@nb@sid@b@x=\box26
+\bibindent=\dimen102
+) (/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2001/06/05 v1.94 Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2001/06/05 v1.94 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+))
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2001/07/10 v0.99a Input encoding file 
+))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+
+(/usr/share/texmf/tex/generic/babel/ngermanb.ldf
+Language: ngermanb 2001/02/06 v2.6m new German support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count89
+\U@D=\dimen103
+)
+\l@naustrian = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 73.
+)) (./main.aux
+
+LaTeX Warning: Label `Beschreibung' multiply defined.
+
+
+LaTeX Warning: Label `Beschreibung' multiply defined.
+
+
+LaTeX Warning: Label `_new_' multiply defined.
+
+
+LaTeX Warning: Label `Objektmethoden' multiply defined.
+
+
+LaTeX Warning: Label `Klassenmethoden' multiply defined.
+
+
+LaTeX Warning: Label `_new_' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Klassenmethoden' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Foreign-Key-Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Klassenmethoden' multiply defined.
+
+
+LaTeX Warning: Label `_get_' multiply defined.
+
+
+LaTeX Warning: Label `_add_' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Klassenmethoden' multiply defined.
+
+
+LaTeX Warning: Label `_new_' multiply defined.
+
+
+LaTeX Warning: Label `_get_' multiply defined.
+
+
+LaTeX Warning: Label `Objektmethoden' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Foreign-Key-Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Foreign-Key-Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Klassenmethoden' multiply defined.
+
+
+LaTeX Warning: Label `Foreign-Key-Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Foreign-Key-Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Skalare_Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Foreign-Key-Attribute' multiply defined.
+
+
+LaTeX Warning: Label `Objektmethoden' multiply defined.
+
+
+LaTeX Warning: Label `_add_' multiply defined.
+
+
+LaTeX Warning: Label `Klassenmethoden' multiply defined.
+
+
+LaTeX Warning: Label `_get_by_provider_' multiply defined.
+
+
+LaTeX Warning: Label `sendwml_' multiply defined.
+
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+Anhang A.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 13.
+(/usr/share/texmf/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [1{/usr/share/texmf/dvips/config/pdftex.map}
+
+
+
+]
+Anhang B.
+[2
+
+
+]
+Anhang C.
+(./Controller.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 13.
+ (/usr/share/texmf/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 13.
+) (./Object.tex
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 93.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 93.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 93.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+/ecti0800/Parameter: /ecrm0800/id_col (/ectt0800/string/ecrm0800/), col_to_upda
+te (/ectt0800/string/ecrm0800/),
+ []
+
+[3
+
+]
+Underfull \hbox (badness 7064) in paragraph at lines 122--123
+/ecti0800/Rückgabewert: /ecrm0800/Lis-te der Spal-ten, die kein Text bein-hal-t
+en
+ []
+
+) (./Point.tex
+Underfull \hbox (badness 2452) in paragraph at lines 10--14
+/ecrm0800/This class re-pres-ents a point on the earth. The coor-di-na-tes
+ []
+
+
+Underfull \hbox (badness 1728) in paragraph at lines 10--14
+/ecrm0800/can be re-fer-red as latitude-longitude de-zi-mal coor-di-na-tes with
+
+ []
+
+) (./Area.tex [4]) (./CircularArea.tex) (./Address.tex) (./MeetingPt.tex)
+(./Distance.tex) (./GeocodedPt.tex) (./Geocode.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+/ecti0800/Parameter: /ecrm0800/Geocode-Anfrage (/ectt0800/string/ecrm0800/), Li
+s-te von pas-sen-den
+ []
+
+) (./Person.tex [5]) (./Lift.tex
+Underfull \hbox (badness 1158) in paragraph at lines 54--59
+/ecrm0800/Me-tho-de auf-ge-ru-fen wird (zum Bsp: /ectt0800/Mofa::Modell::Offer 
+/ecrm0800/oder
+ []
+
+) (./Offer.tex) (./Request.tex) (./Mapped.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+/ecrm0800/Mitfahrgelegenheit die ge-ra-de ver-mit-telt wird. Erbt von:
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 31--32
+[]/ectt0800/request (Mofa::Model::Request) /ecrm0800/- Mit-fahr-ge-such das ver
+-mit-telt
+ []
+
+) (./View.tex [6]
+Underfull \hbox (badness 1748) in paragraph at lines 55--58
+/ecti0800/Parameter: /ecrm0800/Vor-ga-ben für Start-punk-te (Re-fe-renz auf Lis
+-te von
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 66--69
+/ecti0800/Parameter: /ecrm0800/Vor-ga-ben für Start-punk-te (Re-fe-renz auf Lis
+-te von
+ []
+
+
+Underfull \hbox (badness 6125) in paragraph at lines 171--175
+/ecti0800/Parameter: /ecrm0800/Typ des ein-zu-ge-ben-den Punk-tes (start, des-t
+i-na-
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 171--175
+/ecrm0800/ti-on) (/ectt0800/string/ecrm0800/), je 3 Array-Referenzen auf ei-ne 
+Lis-te von
+ []
+
+) [7] (./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1520 strings out of 95437
+ 18784 string characters out of 1190233
+ 78428 words of memory out of 1000001
+ 4503 multiletter control sequences out of 10000+50000
+ 11066 words of font info for 28 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 27i,7n,24p,242b,205s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 33 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+{/usr/share/texmf/dvips/tetex/aae443f0.enc}</usr/share/texmf/fonts/type1/blue
+sky/cm/cmmi8.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecsx0800.600pk> </var
+/cache/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </var/cache/fonts/pk/ljfour/
+jknappen/ec/ectt0800.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecsx1000.60
+0pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecsx1095.600pk> </var/cache/fonts/
+pk/ljfour/jknappen/ec/ecrm0800.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/e
+csx1440.600pk>
+Output written on main.pdf (7 pages, 113628 bytes).

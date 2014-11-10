@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>../Mofa/Controller.pm</title>
+<meta http-equiv="content-type" content="text/html; charset=iso8859-15" />
+<link rev="made" href="mailto:Gentoo@notebook.sybevna.de" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#mofa__controller">Mofa::Controller</a></li>
+	<ul>
+
+		<li><a href="#beschreibung">Beschreibung</a></li>
+		<li><a href="#vermittlung_zwischen_mitfahrgelegenheiten_und_gesuchen">Vermittlung zwischen Mitfahrgelegenheiten und Gesuchen</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#__mapping_lift___"><code>@ mapping_lift($)</code></a></li>
+				<li><a href="#__mapping_search___"><code>@ mapping_search($)</code></a></li>
+			</ul>
+
+		</ul>
+
+		<li><a href="#geocoding">Geocoding</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#__geocode___"><code>$ geocode(@)</code></a></li>
+			</ul>
+
+		</ul>
+
+		<li><a href="#handylokalisierung">Handy-Lokalisierung</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#__get_position___"><code>$ get_position($)</code></a></li>
+			</ul>
+
+		</ul>
+
+		<li><a href="#smsversand">SMS-Versand</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#__send_push_sms_____"><code>$ send_push_sms($$$)</code></a></li>
+			</ul>
+
+		</ul>
+
+		<li><a href="#entfernungsbestimmung__routenplanung_">Entfernungsbestimmung (Routenplanung)</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#_____street_dist____"><code>($$) street_dist($$)</code></a></li>
+			</ul>
+
+		</ul>
+
+		<li><a href="#kartenbilder">Kartenbilder</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#__get_map_img____"><code>$ get_map_img($@)</code></a></li>
+			</ul>
+
+		</ul>
+
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="mofa__controller">Mofa::Controller</a></h1>
+<p>Modul zum Zugriff auf Dienste für die Mitfahrzentrale</p>
+<p>
+</p>
+<h2><a name="beschreibung">Beschreibung</a></h2>
+<p>Dieses Modul beeinhaltet den Vermittlungsdienst, sowie weitere Funktionen, 
+mit welchen auf den externe Dienste zugegriffen werden kann.</p>
+<p>
+</p>
+<h2><a name="vermittlung_zwischen_mitfahrgelegenheiten_und_gesuchen">Vermittlung zwischen Mitfahrgelegenheiten und Gesuchen</a></h2>
+<p>
+</p>
+<h4><a name="__mapping_lift___"><code>@ mapping_lift($)</code></a></h4>
+<p><em>Parameter:</em> <code>Offer</code>-Objekt</p>
+<p><em>Rückgabewert:</em> sortierte Liste von <code>Mapped</code>-Objekten</p>
+<p>Findet passende Gesuche in der Datenbank und berechnet die Umwege, die 
+der Anbieter machen müsste, um diese Mitfahrgelegenheiten durchzuführen.</p>
+<p>
+</p>
+<h4><a name="__mapping_search___"><code>@ mapping_search($)</code></a></h4>
+<p><em>Parameter:</em> <code>Request</code>-Objekt</p>
+<p><em>Rückgabewert:</em> sortierte Liste von <code>Mapped</code>-Objekten</p>
+<p>Findet passende Angebote in der Datenbank und berechnet die Umwege, die
+die Anbieter machen müssten, um diese Mitfahrgelegenheit durchzuführen.</p>
+<p>
+</p>
+<h2><a name="geocoding">Geocoding</a></h2>
+<p>
+</p>
+<h4><a name="__geocode___"><code>$ geocode(@)</code></a></h4>
+<p><em>Parameter:</em> Adressbeschreibung <code>(string,..)</code></p>
+<p><em>Rückgabewert:</em> <code>Geocode</code>-Objekt</p>
+<p>Konstruiert eine Geocode-Anfrage, und vervollständigt die Adresse mit Koordinaten
+mit Hilfe der Datenbank oder eines externen Geocodingdienstes</p>
+<p>
+</p>
+<h2><a name="handylokalisierung">Handy-Lokalisierung</a></h2>
+<p>
+</p>
+<h4><a name="__get_position___"><code>$ get_position($)</code></a></h4>
+<p><em>Parameter:</em> Handy-Nummer (<code>string</code>)</p>
+<p><em>Rückgabewert:</em>  <code>Area</code>-Objekt</p>
+<p>Fragt das Gebiet, in dem das Handy sich befinden kann, beim Lokalisierungsdienst ab.</p>
+<p>
+</p>
+<h2><a name="smsversand">SMS-Versand</a></h2>
+<p>
+</p>
+<h4><a name="__send_push_sms_____"><code>$ send_push_sms($$$)</code></a></h4>
+<p><em>Parameter:</em> Handy-Nr (<code>string</code>), Nachricht (<code>string</code>), URL (<code>string</code>)</p>
+<p><em>Rückgabewert:</em> <code>string</code> mit Antwort des SMS-Servicecenters</p>
+<p>Versendet eine WAP-Push-SMS mit der Nachricht und dem Link an die Handynummer.</p>
+<p>
+</p>
+<h2><a name="entfernungsbestimmung__routenplanung_">Entfernungsbestimmung (Routenplanung)</a></h2>
+<p>
+</p>
+<h4><a name="_____street_dist____"><code>($$) street_dist($$)</code></a></h4>
+<p><em>Parameter:</em> 2 <code>Point</code>-Objekte</p>
+<p>Rückgabewerte: ( Strassenentfernung in Km (<code>float</code>), 
+                     Fahrtzeit in Minuten (<code>int</code>)</p>
+<p>Die Entfernung wird im Cache nachgeschlagen, falls dies fehlschlägt bei 
+Internet-Services erfragt und falls dies fehlschlaegt wird die Luftlinien-Entfernung 
+zurueckgegeben. Daher ist der Wert fuer Entfernung auf jeden Fall definiert, der Wert 
+fuer Zeit nicht immer.</p>
+<p>
+</p>
+<h2><a name="kartenbilder">Kartenbilder</a></h2>
+<p>
+</p>
+<h4><a name="__get_map_img____"><code>$ get_map_img($@)</code></a></h4>
+<p><em>Parameter:</em> <code>Point</code>-Objekt, [Radius (<code>int</code>),  [Höhe (<code>int</code>), Breite (<code>int</code>)]]</p>
+<p><em>Rückgabewert:</em> URL zu einem png-Bild einer Karte (<code>string</code>)</p>
+<p>Fragt die URL zur Karte mit dem angegebenem Mittelpunkt, die ein Gebiet
+mit dem angegebenem Radius (in Kilometern) zeigt, beim Yahoo-Mapimagedienst an. 
+Mit den Paramtern Höhe und Breite kann die Größe des Bildes in Pixeln festgelegt werden.</p>
+
+</body>
+
+</html>

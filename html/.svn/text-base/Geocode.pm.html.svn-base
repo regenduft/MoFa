@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Geocode.pm</title>
+<meta http-equiv="content-type" content="text/html; charset=iso8859-15" />
+<link rev="made" href="mailto:Gentoo@notebook.sybevna.de" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<ul>
+
+		<li><a href="#mofa__model__geocode">Mofa::Model::Geocode</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#klassenmethoden">Klassenmethoden</a></li>
+				<li><a href="#__new____"><code>$ new($@)</code></a></li>
+				<li><a href="#objektmethoden">Objektmethoden</a></li>
+				<li><a href="#__points__"><code>@ points()</code></a></li>
+			</ul>
+
+		</ul>
+
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h2><a name="mofa__model__geocode">Mofa::Model::Geocode</a></h2>
+<p>Antwort auf eine Geocode-Anfrage. Erbt von: <code>Mofa::Model::Object</code>.</p>
+<p>
+</p>
+<h4><a name="klassenmethoden">Klassenmethoden</a></h4>
+<p>
+</p>
+<h4><a name="__new____"><code>$ new($@)</code></a></h4>
+<p><em>Parameter:</em> Geocode-Anfrage (<code>string</code>), 
+               Liste von passenden GeocodedPt-Objekten
+</p>
+<pre>
+
+I&lt;Rückgabewert:&gt; neues C&lt;Geocode&gt;-Objekt.</pre>
+<pre>
+
+=head4 C&lt;$ get($)&gt;</pre>
+<p><em>Parameter:</em> Geocode-Anfrage (<code>string</code>)
+</p>
+<pre>
+
+I&lt;Rückgabewert:&gt; Zu dieser Geocode-Anfrage passendes C&lt;Geocode&gt;-Objekt</pre>
+<p>Alle zu dieser Anfrage passenden Punkte werden in der
+Datenbank gesucht, und zum neuem Geocode Objekt hinzugefügt.</p>
+<p>
+</p>
+<h4><a name="objektmethoden">Objektmethoden</a></h4>
+<p>
+</p>
+<h4><a name="__points__"><code>@ points()</code></a></h4>
+<p><em>Rückgabewert:</em> Liste der <code>GeocodedPts</code> in diesem <code>Geocode</code>-Objekt.
+</p>
+<pre>
+
+=head4 C&lt;$ push(@)&gt;</pre>
+<p><em>Parameter:</em> Liste von <code>GeocodedPts</code></p>
+<p>Fügt die übergeben GeocodetPts zu diesem Objekt hinzu.</p>
+
+</body>
+
+</html>

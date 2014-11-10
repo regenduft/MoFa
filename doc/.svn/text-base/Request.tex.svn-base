@@ -1,0 +1,14 @@
+\subsection*{Mofa::Model::Request\label{Mofa::Model::Request}\index{Mofa::Model::Request}}
+
+
+Mitfahrgesuche. Erbt von: \texttt{Mofa::Model::Lift}.
+
+\minisec{Foreign-Key-Attribute\label{Foreign-Key-Attribute}\index{Foreign-Key-Attribute}}
+
+
+\texttt{requester (Mofa::Model::Person) } - Person, die diese Mitfahrgelegenheit sucht.
+
+
+
+\texttt{requesterId (string)}
+

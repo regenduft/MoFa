@@ -1,0 +1,117 @@
+\section{Mofa::Controller\label{Mofa::Controller}\index{Mofa::Controller}}
+
+
+Modul zum Zugriff auf Dienste für die Mitfahrzentrale
+
+\subsection*{Beschreibung\label{Beschreibung}\index{Beschreibung}}
+
+
+Dieses Modul beeinhaltet den Vermittlungsdienst, sowie weitere Funktionen, 
+mit welchen auf den externe Dienste zugegriffen werden kann.
+
+\subsection*{Vermittlung zwischen Mitfahrgelegenheiten und Gesuchen\label{Vermittlung_zwischen_Mitfahrgelegenheiten_und_Gesuchen}\index{Vermittlung zwischen Mitfahrgelegenheiten und Gesuchen}}
+\minisec{\texttt{@ mapping\_lift(\$)}\label{_mapping_lift_}\index{@ mapping\ lift(\$)}}
+
+
+\textit{Parameter:} \texttt{Offer}-Objekt
+
+
+
+\textit{Rückgabewert:} sortierte Liste von \texttt{Mapped}-Objekten
+
+
+
+Findet passende Gesuche in der Datenbank und berechnet die Umwege, die 
+der Anbieter machen müsste, um diese Mitfahrgelegenheiten durchzuführen.
+
+\minisec{\texttt{@ mapping\_search(\$)}\label{_mapping_search_}\index{@ mapping\ search(\$)}}
+
+
+\textit{Parameter:} \texttt{Request}-Objekt
+
+
+
+\textit{Rückgabewert:} sortierte Liste von \texttt{Mapped}-Objekten
+
+
+
+Findet passende Angebote in der Datenbank und berechnet die Umwege, die
+die Anbieter machen müssten, um diese Mitfahrgelegenheit durchzuführen.
+
+\subsection*{Geocoding\label{Geocoding}\index{Geocoding}}
+\minisec{\texttt{\$ geocode(@)}\label{_geocode_}\index{\$ geocode(@)}}
+
+
+\textit{Parameter:} Adressbeschreibung \texttt{(string,..)}
+
+
+
+\textit{Rückgabewert:} \texttt{Geocode}-Objekt
+
+
+
+Konstruiert eine Geocode-Anfrage, und vervollständigt die Adresse mit Koordinaten
+mit Hilfe der Datenbank oder eines externen Geocodingdienstes
+
+\subsection*{Handy-Lokalisierung\label{Handy-Lokalisierung}\index{Handy-Lokalisierung}}
+\minisec{\texttt{\$ get\_position(\$)}\label{_get_position_}\index{\$ get\ position(\$)}}
+
+
+\textit{Parameter:} Handy-Nummer (\texttt{string})
+
+
+
+\textit{Rückgabewert:}  \texttt{Area}-Objekt
+
+
+
+Fragt das Gebiet, in dem das Handy sich befinden kann, beim Lokalisierungsdienst ab.
+
+\subsection*{SMS-Versand\label{SMS-Versand}\index{SMS-Versand}}
+\minisec{\texttt{\$ send\_push\_sms(\$\$\$)}\label{_send_push_sms_}\index{\$ send\ push\ sms(\$\$\$)}}
+
+
+\textit{Parameter:} Handy-Nr (\texttt{string}), Nachricht (\texttt{string}), URL (\texttt{string})
+
+
+
+\textit{Rückgabewert:} \texttt{string} mit Antwort des SMS-Servicecenters
+
+
+
+Versendet eine WAP-Push-SMS mit der Nachricht und dem Link an die Handynummer.
+
+\subsection*{Entfernungsbestimmung (Routenplanung)\label{Entfernungsbestimmung_Routenplanung_}\index{Entfernungsbestimmung (Routenplanung)}}
+\minisec{\texttt{(\$\$) street\_dist(\$\$)}\label{_street_dist_}\index{(\$\$) street\ dist(\$\$)}}
+
+
+\textit{Parameter:} 2 \texttt{Point}-Objekte
+
+
+
+Rückgabewerte: ( Strassenentfernung in Km (\texttt{float}), 
+                     Fahrtzeit in Minuten (\texttt{int})
+
+
+
+Die Entfernung wird im Cache nachgeschlagen, falls dies fehlschlägt bei 
+Internet-Services erfragt und falls dies fehlschlaegt wird die Luftlinien-Entfernung 
+zurueckgegeben. Daher ist der Wert fuer Entfernung auf jeden Fall definiert, der Wert 
+fuer Zeit nicht immer.
+
+\subsection*{Kartenbilder\label{Kartenbilder}\index{Kartenbilder}}
+\minisec{\texttt{\$ get\_map\_img(\$@)}\label{_get_map_img_}\index{\$ get\ map\ img(\$@)}}
+
+
+\textit{Parameter:} \texttt{Point}-Objekt, [Radius (\texttt{int}),  [Höhe (\texttt{int}), Breite (\texttt{int})]]
+
+
+
+\textit{Rückgabewert:} URL zu einem png-Bild einer Karte (\texttt{string})
+
+
+
+Fragt die URL zur Karte mit dem angegebenem Mittelpunkt, die ein Gebiet
+mit dem angegebenem Radius (in Kilometern) zeigt, beim Yahoo-Mapimagedienst an. 
+Mit den Paramtern Höhe und Breite kann die Größe des Bildes in Pixeln festgelegt werden.
+

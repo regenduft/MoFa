@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Address.pm</title>
+<meta http-equiv="content-type" content="text/html; charset=iso8859-15" />
+<link rev="made" href="mailto:Gentoo@notebook.sybevna.de" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<ul>
+
+		<li><a href="#mofa__model__address">Mofa::Model::Address</a></li>
+		<ul>
+
+			<ul>
+
+				<li><a href="#skalare_attribute">Skalare Attribute</a></li>
+			</ul>
+
+		</ul>
+
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h2><a name="mofa__model__address">Mofa::Model::Address</a></h2>
+<p>Objekte dieser Klasse repräsentieren einen Punkt auf der Erdoberfläche mit
+Koordinaten und mit Adresse.
+Erbt von: <code>Mofa::Model::Point</code>.</p>
+<p>
+</p>
+<h4><a name="skalare_attribute">Skalare Attribute</a></h4>
+<p><code>nr          (int)   </code> - Hausnummer</p>
+<p><code>description (string)</code> - kurze Beschreibung zur Darstellung
+wo die vollständige Adresse nicht hinpasst z.B. ``Kaiserslautern Bus Hauptbahnhof''</p>
+<p><code>street      (string)</code> - Straße</p>
+<p><code>city        (string)</code> - Stadt</p>
+<p><code>zip         (string)</code> - Postleitzahl</p>
+<p><code>region      (string)</code> - Bundesland</p>
+<p><code>district    (string)</code> - Kreis</p>
+<p><code>state       (string)</code> - Staat (Abkürzung, Deutschland = 'de')</p>
+
+</body>
+
+</html>

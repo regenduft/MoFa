@@ -1,0 +1,33 @@
+Controller:
+Soll Funktionen zum Hinzufügen, Ändern, Löschen und Suchen von Mitfahrgelegenheiten zur Verfügung stellen
+Außerdem Funktionen zum Anlegen und Bearbeiten des eigenen Profils.
+
+add_lift(%)
+change_lift($%)
+remove_lift($)
+search(%)
+
+add_user(%)
+change_user(%)
+remove_user(%)
+
+get_start_locations_for_user($)
+	Gibt eine Liste von sinnvollen Treffpunkten für den Benutzer mit id $
+	aus. Wenn laut Profil eine Lokalisierung möglich ist, sollte diese durchgeführt werden.
+	Wenn nicht, wird die im Profil gespeicherte Liste verwendet.
+
+View:
+Soll Interfaces zum Eingeben, Ändern, Löschen und Suchen von Mitfahrgelegenheiten anzeigen
+Außerdem Interfaces zum Anlegen und Bearbeiten des Profiles
+
+display_index()
+ 	Zeigt die Startseite mit den verfügbaren Möglichkeiten
+display_search()
+ 	Zeigt ein Suchformular bzw. einen Wizard mit mehreren Cards, der aber in einem Deck untergebracht wird.
+	Eingabefelder für: 	Startort, Zielort --> get_locations_for_user()
+						Startzeit, Datum
+display_find_location()
+	Zeigt einen Wizard, der dabei hilft einen Treffpunkt auszuwählen, zum Beispiel indem zunächst
+	das Bundesland, dann die Stadt, dann der Stadtteil, dann zwei Straßen ausgewählt werden.
+display_add_lift()
+	Zeigt ein Formular bzw. einen Wizard um eine Mitfahrgelegenheit einzutragen

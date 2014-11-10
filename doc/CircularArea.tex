@@ -1,0 +1,51 @@
+\subsection*{Mofa::Model::CircularArea\label{Mofa::Model::CircularArea}\index{Mofa::Model::CircularArea}}
+
+
+Repräsentiert ein Gebiet in Form eines Ring-Ausschnitts auf der Erdoberfläche,
+(Typischerweise verwendet zur Beschreibung des Ergebnis einer Positionsbestimmungsanfrage).
+Erbt von \texttt{Mofa::Model::Area}.
+
+\minisec{Skalare Attribute\label{Skalare_Attribute}\index{Skalare Attribute}}
+
+
+\texttt{inRadius   (int)} - innerer Radius des Rings in Metern
+
+
+
+\texttt{outRadius  (int)} - äußerer Radius des Rings in Metern
+
+
+
+\texttt{startAngle (int)} - Winkel zu Nord, ab dem das Gebiet beginnt
+
+
+
+\texttt{stopAngle  (int)} - Winkel zu Nord, bei dem das Gebiet endet.
+
+\minisec{Klassenmethoden\label{Klassenmethoden}\index{Klassenmethoden}}
+\minisec{\texttt{\$ new(\$)}\label{_new_}\index{\$ new(\$)}}
+
+
+\textit{Parameter:} Hashreferenz
+
+
+
+\textit{Rückgabewert:} \texttt{CircularArea}-Objekt
+
+
+
+Die Hashreferenz muss zusätzlich zu den Attributen,
+die zur Initialisierung eines Point-Objekt notwendig sind, 
+die Attribute inRadius, outRadius, startAngle und stopAngle 
+enthalten.
+
+\minisec{\texttt{\$ newcircle(\$\$)}\label{_newcircle_}\index{\$ newcircle(\$\$)}}
+
+
+\textit{Parameter:} \texttt{Point}-Objekt, Radius (\texttt{int})
+
+
+
+\textit{Rückgabewert:} \texttt{CircularArea}-Objekt, das die Kreisfläche mit dem Radius 
+um den angegebenen Punkt repräsentiert
+

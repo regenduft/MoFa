@@ -1,0 +1,241 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>View.pm</title>
+<meta http-equiv="content-type" content="text/html; charset=iso8859-15" />
+<link rev="made" href="mailto:Gentoo@notebook.sybevna.de" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#mofa__view">Mofa::View</a></li>
+	<ul>
+
+		<ul>
+
+			<ul>
+
+				<li><a href="#__get_link___"><code>$ get_link(@)</code></a></li>
+				<li><a href="#__post_link___"><code>$ post_link(@)</code></a></li>
+				<li><a href="#__back_link__"><code>$ back_link()</code></a></li>
+				<li><a href="#__logout_link__"><code>$ logout_link()</code></a></li>
+				<li><a href="#__card_login__"><code>$ card_login()</code></a></li>
+				<li><a href="#__card_anon_start__"><code>$ card_anon_start()</code></a></li>
+				<li><a href="#__card_search_____"><code>$ card_search($$$)</code></a></li>
+				<li><a href="#__card_entry____"><code>$ card_entry($$)</code></a></li>
+				<li><a href="#_card_infos__"><code>$card_infos()</code></a></li>
+				<li><a href="#__card_bookmark__"><code>$ card_bookmark()</code></a></li>
+				<li><a href="#__card_personal_menu__"><code>$ card_personal_menu()</code></a></li>
+				<li><a href="#login__"><code>login()</code></a></li>
+				<li><a href="#personal_index__"><code>personal_index()</code></a></li>
+				<li><a href="#anon_index__"><code>anon_index()</code></a></li>
+				<li><a href="#logout__"><code>logout()</code></a></li>
+				<li><a href="#confirm_register__"><code>confirm_register()</code></a></li>
+				<li><a href="#display_map________"><code>display_map($$$$$$)</code></a></li>
+				<li><a href="#display_accept___"><code>display_accept(@)</code></a></li>
+				<li><a href="#display_search_form__"><code>display_search_form()</code></a></li>
+				<li><a href="#display_enter_time__"><code>display_enter_time()</code></a></li>
+				<li><a href="#card_enter_point______"><code>card_enter_point($$$@)</code></a></li>
+				<li><a href="#display_enter_point______"><code>display_enter_point($$$$)</code></a></li>
+				<li><a href="#display_search_result__"><code>display_search_result()</code></a></li>
+				<li><a href="#display_err___"><code>display_err(@)</code></a></li>
+				<li><a href="#display_msg____"><code>display_msg($@)</code></a></li>
+				<li><a href="#login_splash__"><code>login_splash()</code></a></li>
+				<li><a href="#login_failure"><code>login_failure</code></a></li>
+				<li><a href="#sendwml___"><code>sendwml(@)</code></a></li>
+				<li><a href="#sendwml___"><code>sendwml(@)</code></a></li>
+				<li><a href="#myparam___"><code>myparam(@)</code></a></li>
+			</ul>
+
+		</ul>
+
+	</ul>
+
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="mofa__view">Mofa::View</a></h1>
+<p>Stellt Funktionen zur Ausgabe von WML-Seiten zur Verfügung</p>
+<p>
+</p>
+<h4><a name="__get_link___"><code>$ get_link(@)</code></a></h4>
+<p><em>Parameter:</em> Datei, auf die verlinkt werden soll (<code>string</code>),
+Liste von Referenzen auf 2-Elementige Listen
+mit Paaren der Form (key, value) für zu übermittelnde
+Daten</p>
+<p><em>Rückgabewert:</em> String mit Get-Link zu der angebene Seite (mit Session-Id)</p>
+<p>
+</p>
+<h4><a name="__post_link___"><code>$ post_link(@)</code></a></h4>
+<p><em>Parameter:</em> Datei, auf die verlinkt werden soll (<code>string</code>),
+Liste von Referenzen auf 2-Elementige Listen
+mit Paaren der Form (key, value) für zu übermittelnde
+Daten</p>
+<p><em>Rückgabewert:</em> String mit Post-Link zu der angebene Seite (mit Session-Id)</p>
+<p>
+</p>
+<h4><a name="__back_link__"><code>$ back_link()</code></a></h4>
+<p><em>Rückgabewert:</em> <code>string</code> mit zurück-Link</p>
+<p>
+</p>
+<h4><a name="__logout_link__"><code>$ logout_link()</code></a></h4>
+<p><em>Rückgabewert:</em> falls angemeldet: <code>string</code> mit Link um sich abzumelden;
+                  sonst: leerer <code>string</code></p>
+<p>
+</p>
+<h4><a name="__card_login__"><code>$ card_login()</code></a></h4>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card: komplettes Login-Formular</p>
+<p>
+</p>
+<h4><a name="__card_anon_start__"><code>$ card_anon_start()</code></a></h4>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card:
+     Startseite optimiert für nicht angemeldete Benutzer</p>
+<p>
+</p>
+<h4><a name="__card_search_____"><code>$ card_search($$$)</code></a></h4>
+<p><em>Parameter:</em> Vorgaben für Startpunkte (Referenz auf Liste von <code>Mofa::Model::Address</code>-Objekten),
+Vorgaben für Endpunkte (Referenz auf Liste von <code>Mofa::Model::Address</code>-Objekten),
+URL an die Formular gesendet werden soll (<code>string</code>)</p>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card: Suchformular mit Start, Ziel, Zeit</p>
+<p>
+</p>
+<h4><a name="__card_entry____"><code>$ card_entry($$)</code></a></h4>
+<p><em>Parameter:</em> Vorgaben für Startpunkte (Referenz auf Liste von <code>Mofa::Model::Address</code>-Objekten)),
+Vorgaben für Endpunkte (Referenz auf Liste von <code>Mofa::Model::Address</code>-Objekten),
+URL an die Formular gesendet werden soll (<code>string</code>)</p>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card: Eingabeformular für neue MFG</p>
+<p>
+</p>
+<h4><a name="_card_infos__"><code>$card_infos()</code></a></h4>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card: Infos/Impressum</p>
+<p>
+</p>
+<h4><a name="__card_bookmark__"><code>$ card_bookmark()</code></a></h4>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card: Enthält Link der
+als Bookmark zum automatischem Login gespeichert werden kann.</p>
+<p>
+</p>
+<h4><a name="__card_personal_menu__"><code>$ card_personal_menu()</code></a></h4>
+<p><em>Rückgabewert:</em> <code>string</code> mit WML-Card: Startseite nach dem Einloggen.</p>
+<p>
+</p>
+<h4><a name="login__"><code>login()</code></a></h4>
+<p>Checks if the submitted parameters match a login-id and password from the
+DB, saves the login-id to the session and prints <code>login_splash()</code>
+in case of success or <code>login_failure()</code> if no success.</p>
+<p>
+</p>
+<h4><a name="personal_index__"><code>personal_index()</code></a></h4>
+<p>Gibt ein WML-Deck mit einigen WML-Cards als Startseite
+nach dem einloggen aus. Falls der Benutzer nicht eingeloggt ist
+wird stattdessen <code>login_failure()</code> ausegegeben.</p>
+<p>
+</p>
+<h4><a name="anon_index__"><code>anon_index()</code></a></h4>
+<p>Gibt ein WML-Deck mit einigen Cards als allgemeine
+Startseite aus. Falls logout=1 übermittelt wurde, wird
+der Benutzer auch noch ausgeloggt.</p>
+<p>
+</p>
+<h4><a name="logout__"><code>logout()</code></a></h4>
+<p>Löscht die Session. Gibt WML-Deck aus mit der Meldung, dass man ausgeloggt wurde
+und Auto-Login-Lesezeichen ungültig wurden.</p>
+<p>
+</p>
+<h4><a name="confirm_register__"><code>confirm_register()</code></a></h4>
+<p>Gibt WML-Deck mit Meldung, dass Registrierung abgeschlossen ist, aus.
+Leitet an search.pl weiter, wo die Suche fortgesetzt werden kann.</p>
+<p>
+</p>
+<h4><a name="display_map________"><code>display_map($$$$$$)</code></a></h4>
+<p><em>Parameter:</em> URL zum Kartenbild (<code>string</code>), 
+Parameter für dieses Bild (X, Y, Radius, Höhe, Breite) als <code>int</code></p>
+<p>Gibt WML-Deck aus, mit dem Bild an der angegebenen URL und Links zum auszoomen, einzoomen
+und evtl. zur Navigation.</p>
+<p>
+</p>
+<h4><a name="display_accept___"><code>display_accept(@)</code></a></h4>
+<p><em>Parameter:</em> Liste von <code>Mapped</code>-Objekten</p>
+<p>Gibt WML-Deck mit einer Übersichts-Card und einer WML-Card für
+jedes Mapped-Objekt an. Bietet Optionen ein Anfrage zu aktzeptieren
+oder abzulehen.</p>
+<p>
+</p>
+<h4><a name="display_search_form__"><code>display_search_form()</code></a></h4>
+<p>Gibt WML-Deck mit einer Card mit dem Suchformular aus.</p>
+<p>
+</p>
+<h4><a name="display_enter_time__"><code>display_enter_time()</code></a></h4>
+<p>Gibt ein WML-Deck mit einer Card zur Eingabe der Startzeit
+einer Mitfahrgelegenheit aus.</p>
+<p>
+</p>
+<h4><a name="card_enter_point______"><code>card_enter_point($$$@)</code></a></h4>
+<p><em>Parameter:</em> Typ des einzugebenden Punktes (start oder destination) (<code>string</code>),
+Anzuzeigende Beschreibung des einzugebenden Punktes (<code>string</code>), id der Card (<code>string</code>),
+Liste von <code>Mofa::Address</code>-Objekten die zur Auswahl zur Verfügung stehen.</p>
+<p><em>Rückgabewert:</em> <code>string</code> mit einer WML-Card mit einem Formular zur
+Eingabe oder Auswahl eines Treffpunktes.</p>
+<p>
+</p>
+<h4><a name="display_enter_point______"><code>display_enter_point($$$$)</code></a></h4>
+<p><em>Parameter:</em> Typ des einzugebenden Punktes (start, destination) (<code>string</code>),
+je 3 Array-Referenzen auf eine Liste von <code>Mofa::Model::Address</code>-Objekten mit:
+Punkten in der Umgebung, Punkten die früher schonmal gewählt wurden, geocodierten
+Punkten.</p>
+<p>Gibt eine WML-Seite zur Eingabe oder Auswahl eines Treffpunktes aus.</p>
+<p>
+</p>
+<h4><a name="display_search_result__"><code>display_search_result()</code></a></h4>
+<p>Gibt WML-Deck mit der Aufforderung sich zu registrieren aus.</p>
+<p>
+</p>
+<h4><a name="display_err___"><code>display_err(@)</code></a></h4>
+<p><em>Parameter</em>: Fehlermeldungen (<code>(string,..)</code>).</p>
+<p>Gibt WML-Deck mit Titel Fehler und jedem übergebenem String in je einer Zeile aus.
+Bittet Browser, die Seite immmer neu zu laden und nicht im Cache abzulegen.</p>
+<p>
+</p>
+<h4><a name="display_msg____"><code>display_msg($@)</code></a></h4>
+<p><em>Parameter</em>: Überschrift (<code>string</code>), Nachrichten (<code>(string,..)</code>).</p>
+<p>Gibt WML-Deck mit dem Titel und jeder Nachricht in einer eigenen Zeile aus.
+Deck wird nicht im Cache zwischengespeichert.</p>
+<p>
+</p>
+<h4><a name="login_splash__"><code>login_splash()</code></a></h4>
+<p>Gibt WML-Deck aus mit einer Meldung über erfolgreichen Login, und leitet sofort
+an p_index.pl weiter. Dient dazu, Login und Passwort aus der
+URL zu entfernen, damit der Benutzer, falls er Lesezeichen speichert, 
+nicht sein Passwort im Klartext im Lesezeichen mitspeichert.</p>
+<p>
+</p>
+<h4><a name="login_failure"><code>login_failure</code></a></h4>
+<p>Gibt WML-Deck mit einer Fehlermeldung aus. Seite wird nicht im Cache gespeichert.</p>
+<p>
+</p>
+<h4><a name="sendwml___"><code>sendwml(@)</code></a></h4>
+<p><em>Parameter:</em> WML-Cards (<code>(string..)</code>)</p>
+<p>Gibt WML-Deck mit den übergebenen Cards aus.</p>
+<p>
+</p>
+<h4><a name="sendwml___"><code>sendwml(@)</code></a></h4>
+<p><em>Parameter:</em> WML-Cards (<code>(string..)</code>)</p>
+<p>Gibt WML-Deck mit den übergebenen Cards aus.
+Deck wird nicht im Cache gespeichert, sondern immer neu geladen.</p>
+<p>
+</p>
+<h4><a name="myparam___"><code>myparam(@)</code></a></h4>
+<p>Siehe Dokumentation der <code>param</code>-Methode des <code>CGI</code>-Moduls</p>
+
+</body>
+
+</html>
